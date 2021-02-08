@@ -1,0 +1,7 @@
+@import "./generalvariables";
+
+
+@mixin general_style($bgcolor: $simple_color_1, $textcolor: $simple_color_1) {
+  background: $bgcolor;
+  color: $textcolor;
+}

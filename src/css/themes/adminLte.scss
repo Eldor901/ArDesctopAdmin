@@ -1,0 +1,30 @@
+@import "../mixins";
+@import "../generalvariables";
+//AdminLte
+$colors_adminlte_1: #343A40;
+
+
+@mixin admin_lte($mainClass, $headerClass, $drawerClass, $contentClass)
+{
+  .#{$mainClass}{
+    color: $simple_color_2;
+
+    .#{$headerClass}{
+      @include general_style($simple_color_1, $simple_color_2)
+    }
+
+    .#{$drawerClass}{
+      @include general_style($colors_adminlte_1);
+    }
+
+    .#{$contentClass}{
+
+    }
+
+    a {
+      color: $simple_color_1;
+    }
+  }
+}
+
+

@@ -1,0 +1,47 @@
+@import "../mixins";
+@import "../generalvariables";
+
+//spotify theme
+$colors_sp_1: #191414;
+$colors_sp_2: #1DB954;
+$color_sp_3: #464e41;
+$color_sp_4: #58826c;
+$gradient_color1_color2_sp: linear-gradient(0deg, rgba(25,20,20,1) 0%, rgba(29,185,84,1) 100%);
+$gradient_color3_color4_sp: linear-gradient(90deg, rgba(70,78,65,1) 0%, rgba(88,130,108,1) 100%);
+
+
+@mixin spotify_theme($mainClass, $headerClass, $drawerClass, $contentClass)
+{
+  .#{$mainClass}{
+    color: var($simple_color_2);
+
+    .#{$headerClass}{
+      @include general_style($colors_sp_1)
+    }
+
+    .#{$drawerClass}{
+      @include general_style($gradient_color1_color2_sp);
+    }
+
+    .#{$contentClass}{
+       @include general_style(#212121, $simple_color_1);
+
+       .app_card {
+         background: #383636;
+       }
+
+      .app_table {
+        background: #383636;
+        color: $simple_color_1;
+        span, i {
+          color: $simple_color_1;
+        }
+      }
+    }
+
+    a {
+      color: $simple_color_1;
+    }
+
+  }
+}

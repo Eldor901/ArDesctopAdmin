@@ -1,0 +1,7 @@
+@import "/src/css/themes/adminLte";
+@import "/src/css/themes/spotify";
+
+
+@include spotify_theme(spotifyTheme, headerTheme, drawerTheme, contentTheme);
+@include admin_lte(adminLteTheme, headerTheme, drawerTheme, contentTheme);
+
